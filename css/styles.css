@@ -12,13 +12,24 @@ body {
     font-size: 14px;
 } 
 
+/* reset start */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
 .list {
-    list-style: none; 
+    list-style: none;
+    padding: 0; 
     }
 
 .link {
     text-decoration: none;
 }
+
+img {
+    display: block;
+}
+/* reset end */
 
 .visually-hidden {
     position: absolute;
@@ -33,9 +44,32 @@ body {
     margin: -1px;
 }
 
-.pointer {cursor: pointer;}
+.pointer {
+    cursor: pointer;
+}
 
-/*-------------------- Шапка сайту-------------------*/
+.container {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
+   
+    outline: 2px solid red;   
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+
+
+/*--------- Шапка сайту---------------*/
+/* 
+    border-bottom: 1px solid #ECECEC; */
+
 .header {
     background-color: var(--primary-color);
 }
@@ -53,6 +87,9 @@ body {
 .logo-header { color: #000000;}
  
 /* site-nav */
+
+
+
 .nav-link {
         font-weight: 500;
         line-height: 1.14;
@@ -85,20 +122,21 @@ body {
 }
 
 .hero-title {
-    font-weight: 900;
+        font-weight: 900;
         font-size: 44px;
         line-height: 1.36;
-        text-align: center;
         letter-spacing: 0.06em;
         text-transform: uppercase;
         color: var(--primary-color);
 }
 
  .button-primary {
+    padding: 10px 32px;
+    border-radius: 4px;
         font-weight: 700;
         font-size: 16px;
         line-height: 1.88;
-        display: flex;
+        display: inline-block;
         align-items: center;
         text-align: center;
         letter-spacing: 0.06em;
@@ -107,26 +145,34 @@ body {
 }
 
 /*----------------- benefits ----------------------*/
+
+  
+
 .benef-item {
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: var(--primary-text-color);
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primary-text-color);
 }
 
 .descript-item {
-        line-height: 1.7;
-        letter-spacing: 0.03em;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
 }
 
 /* -------------------case---------------- */
 .section-title {
-        font-size: 36px;
-        line-height: 1.17;
-        text-align: center;
-        letter-spacing: 0.03em;
-        color: var(--primary-text-color);
+
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
 }
 
 /* ---------------------team------------------ */
@@ -136,12 +182,14 @@ body {
 }
 
 .developers-title {
+    margin-bottom: 10px;
+
     font-weight: 500;
-        font-size: 16px;
-        line-height: 1.9;
-        text-align: center;
-        letter-spacing: 0.03em;
-        color: var(--primary-text-color);
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
 }
 
 .team-post {
@@ -182,6 +230,9 @@ body {
         background-color: var(--accent-color);}
 
 .button {
+    min-width: 112px;
+        padding: 6px 22px;
+        border-radius: 4px;
         background: #F5F4FA;
         font-weight: 500;
         font-size: 16px;
@@ -191,8 +242,20 @@ body {
         color: var(--primary-text-color);
     }
 
+    /* .list .btn {
+
+       margin-bottom: 50; 
+    } */
+/* 
+    .list > .address:not(:last-child){
+        margin-bottom: 9px;
+    } */
+
 
     .projekt-title {
+
+        margin-bottom: 4px;
+
         font-size: 18px;
         line-height: 2;
         letter-spacing: 0.06em;
