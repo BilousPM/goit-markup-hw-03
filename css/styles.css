@@ -1,8 +1,13 @@
 :root {
+    /* Color */
     --primary-text-color: #212121;
     --accent-color: #2196f3;
     --primary-color: #ffffff;
     --basic-color: #757575;
+
+    /* Other */
+    --indent: 30px;
+    --items: 3;
 }
 
 body {
@@ -12,14 +17,15 @@ body {
     font-size: 14px;
 } 
 
-/* reset start */
+/*===== reset start =====*/
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
 .list {
     list-style: none;
-    padding: 0; 
+    padding: 0;
+    margin: 0; 
     }
 
 .link {
@@ -29,8 +35,10 @@ h1, h2, h3, h4, h5, h6, p {
 img {
     display: block;
 }
-/* reset end */
+/*===== reset end =====*/
 
+
+/*===== body =====*/
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -55,8 +63,7 @@ img {
     margin-right: auto;
     margin-left: auto;
     
-   
-    outline: 2px solid red;   
+    /* outline: 2px solid red;    */
 }
 
 .section {
@@ -64,15 +71,71 @@ img {
     padding-bottom: 94px;
 }
 
-
-
-/*--------- Шапка сайту---------------*/
-/* 
-    border-bottom: 1px solid #ECECEC; */
-
-.header {
-    background-color: var(--primary-color);
+/*===== Card set =====  */
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--indent);
 }
+
+.card-set-item {
+    flex-basis: calc((100% - var(--indent) * (var(--items) - 1) / var(--items)));
+}
+/*=====  =====*/
+
+
+/*===== Header =====*/
+.header {
+    background-colo: var(--primary-color);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.logotype {
+    margin-right: 93px;
+} 
+
+.nav {
+    display: flex;
+    margin-right: auto;
+}
+
+.site-nav {
+    display: flex;
+    align-self: center;
+    gap: 50px;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--accent-color);
+}
+
+.site-nav .nav-link.current {
+    color: var(--accent-color);
+}
+
 
 /* logo */
 .logo {
@@ -86,26 +149,6 @@ img {
 
 .logo-header { color: #000000;}
  
-/* site-nav */
-
-
-
-.nav-link {
-        font-weight: 500;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-        color: var(--primary-text-color);
-}
-
-.nav-link:hover, .nav-link:focus{
-     color: var(--accent-color);
-    }
-
-    .site-nav .nav-link.current {
-        color: var(--accent-color);
-    }
-
-/* contact list */
 .contact-link {
     font-weight: 500;
         line-height: 1.14;
@@ -116,37 +159,48 @@ img {
     color: var(--accent-color);
 }
 
-/*----------------------- hero --------------------*/
+/*===== hero =====*/
 .hero {
-    background-color: #2F303A;
+    background-color: #2F303A; 
 }
 
 .hero-title {
-        font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--primary-color);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px ;
+    width: 696px;
+
+    text-align: center;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary-color);
 }
 
  .button-primary {
+    margin: auto;
+    margin-top: 0px;
     padding: 10px 32px;
     border-radius: 4px;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.88;
-        display: inline-block;
-        align-items: center;
-        text-align: center;
-        letter-spacing: 0.06em;
-        color: var(--primary-color);
-        background-color: var(--accent-color);
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    display:block;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: var(--primary-color);
+    background-color: var(--accent-color);
 }
 
-/*----------------- benefits ----------------------*/
-
-  
+/*===== benefits =====*/
+.benef-list {
+    display: flex;
+    justify-content: space-between;
+}
 
 .benef-item {
     margin-bottom: 10px;
@@ -159,13 +213,19 @@ img {
 }
 
 .descript-item {
+    width: 270px;
     line-height: 1.7;
     letter-spacing: 0.03em;
 }
 
-/* -------------------case---------------- */
-.section-title {
+/*===== Case =====*/
 
+.case-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-title {
     margin-bottom: 50px;
 
     font-size: 36px;
@@ -175,8 +235,17 @@ img {
     color: var(--primary-text-color);
 }
 
-/* ---------------------team------------------ */
- 
+/*===== Team =====*/
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-text {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 .team {
     background-color: #F5F4FA;
 }
@@ -199,7 +268,19 @@ img {
         letter-spacing: 0.03em;
 }
 
-/*---------------footer--------------------------*/
+/*===== Footer =====*/
+
+.logotype-footer {
+    display: flex;
+    padding-top: 60px;
+    margin-bottom: 20px;
+}
+
+.adress-footer {
+    display: flex;
+    padding-bottom: 60px;
+}
+
 .footer .logo-header {
     color: var(--primary-color);
 }
@@ -224,15 +305,46 @@ img {
         color: rgba(255, 255, 255, 0.6);
 }
 
-/* -------------------main portfolio------------- */
+/*===== Portfolio =====*/
+
+.portfolio-filter {
+    display: flex;
+    padding-bottom: 50px;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pointer {
+    padding: 8px 22px;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* --items: 9; */
+
+}
+
+.frame {
+    padding: 20px 24px;
+    width: 370;
+    border: 1px solid #EEEEEE;
+    border-top: 0;
+}
+
+
+
+
 .button:hover, .button:focus {
         color: var(--primary-color);
         background-color: var(--accent-color);}
 
 .button {
+    border: transparent;
     min-width: 112px;
         padding: 6px 22px;
         border-radius: 4px;
+        display: block;
         background: #F5F4FA;
         font-weight: 500;
         font-size: 16px;
@@ -241,16 +353,6 @@ img {
         letter-spacing: 0.03em;
         color: var(--primary-text-color);
     }
-
-    /* .list .btn {
-
-       margin-bottom: 50; 
-    } */
-/* 
-    .list > .address:not(:last-child){
-        margin-bottom: 9px;
-    } */
-
 
     .projekt-title {
 
