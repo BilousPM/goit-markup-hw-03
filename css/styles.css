@@ -285,8 +285,7 @@ img {
 /*===== Footer =====*/
 
 .logotype-footer {
-  display: flex;
-  padding-top: 60px;
+  display: block;
   margin-bottom: 20px;
 }
 
@@ -296,6 +295,7 @@ img {
 
 .footer {
   background-color: #2f303a;
+  padding: 60px 0;
 }
 
 .footer .adres-link {
@@ -313,8 +313,7 @@ img {
 .footer-list {
   display: flex;
   flex-direction: column;
-  columns: 9px;
-  padding-bottom: 60px;
+  gap: 9px;
 }
 
 /*===== Portfolio =====*/
