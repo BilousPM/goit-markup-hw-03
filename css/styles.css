@@ -101,12 +101,14 @@ img {
 }
 
 .logotype {
+  display: inline-block;
   margin-right: 93px;
 }
 
 .nav {
   display: flex;
   margin-right: auto;
+  align-items: center;
 }
 
 .site-nav {
@@ -312,6 +314,7 @@ img {
   display: flex;
   flex-direction: column;
   columns: 9px;
+  padding-bottom: 60px;
 }
 
 /*===== Portfolio =====*/
